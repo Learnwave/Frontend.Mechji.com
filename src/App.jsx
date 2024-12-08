@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import BigNavabr from "./components/Navbar/BigNavabr";
@@ -9,10 +9,11 @@ import SearchResults from "./pages/SearchResults";
 import About from "./pages/About";
 import Community from "./pages/Community";
 import LoginPopUp from "./components/Loginpopup/LoginPopUp";
-
+import { AppContext } from "./Context/AppContext";
 
 const App = () => {
-  const [showLogin, SetShowLogin] = useState(false);
+  
+  const {showLogin, SetShowLogin} = useContext(AppContext);
 
   return (
     <>

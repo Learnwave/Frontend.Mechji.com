@@ -4,9 +4,9 @@ import { AppContext } from "../../Context/AppContext";
 
 const BigNavabr = ({SetShowLogin}) => {
   
-  const {token,setToken} = useContext(AppContext);
+  const {token,setToken,data} = useContext(AppContext);
 
-
+console.log(data);
   return (
     <div className="hidden sm:block">
       <div className="flex  gap-3 items-center justify-between">

@@ -2,12 +2,13 @@ import React, { useContext, useState } from "react";
 import "./Loginpopup.css";
 import axios from 'axios';
 import { AppContext } from "../../Context/AppContext";
+import Oauth from "../OauthGoogle/Oauth";
 
 const LoginPopUp = ({ SetShowLogin }) => {
 
-  const {url,token,setToken} = useContext(AppContext);
+  const {url,token,setToken,SetCurrState,currState} = useContext(AppContext);
   
-  const [currState, SetCurrState] = useState("Sign Up");
+  
 
   const [data,setData] = useState({
         name:"",
@@ -70,11 +71,12 @@ console
             <></>
           ) : (
          
-            <input name="repeat_password" onChange={onChangeHandler} value={data.repeat_password} type="password" placeholder="Re-Enter Password" required />
+            <input name="repeat_password" onChange={onChangeHandler} value={data.repeat_password} type="password" placeholder="Repeat Password" required />
             
           )}
         </div>
         <button type="submit" className="font-bold text-lg">{currState === "Sign Up" ? "Create Account" : "Login"}</button>
+          <Oauth />
         <div className="login-pop-condition">
           <input type="checkbox" required />
           <p>By continuing, i agree to the terms of use & privacy policy</p>

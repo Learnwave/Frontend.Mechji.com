@@ -9,7 +9,7 @@
     background: white;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap:20px;
     padding: 25px 30px;
     border-radius: 8px;
     animation: fadeIn 0.5s;
@@ -27,7 +27,7 @@
 .login-popup-inputs{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 .login-popup-inputs input{
     outline: none;
@@ -47,11 +47,11 @@
     display: flex;
     align-items: start;
     gap: 8px;
-    margin-top: -15px;
+    margin-top: -10px;
     
 }
 .login-pop-condition input{
-    margin-top: 5px;
+    margin-top: 1px;
 }
 .login-popup span{
     color: blue;
